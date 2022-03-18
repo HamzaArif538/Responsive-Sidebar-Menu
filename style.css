@@ -30,18 +30,6 @@ body{
     background: var(--body-color);
 }
 
-/* ========Reuseable CSS ======== */
-.sideBar .text{
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-color);
-}
-
-.sideBar .image{
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-}
 
 
 /* ======== Sidebar ========= */
@@ -57,6 +45,44 @@ body{
     padding: 10px 14px;
     background: var(--sidebar-color);
 }
+
+/* ========Reuseable CSS ======== */
+.sideBar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.sideBar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sideBar li{
+    height: 50px;
+    /* background: red; */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sideBar li .icon{
+    font-size: 20px ;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideBar li text,
+.sideBar li .icon{
+    /* font-size: 20px ; */
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
 
 .sideBar header{
     position: relative;
@@ -101,6 +127,95 @@ header .image-text .header-text{
     color: var(--sidebar-color);
     font-size: 22px;
 }
+
+.sideBar .search-box{
+    background: var(--primary-color-light);
+}
+
+.search-box input{
+    height: 100%;
+    width: 100%;
+    background: var(--primary-color-light);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+.sideBar li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sideBar li a:hover{
+    background: var(--primary-color);
+}
+
+.sideBar li a:hover .icon,
+.sideBar li a:hover .text{
+    color: var(--sidebar-color);
+}
+
+.sideBar .menu-bar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode{
+    background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i{
+    position: absolute;
+}
+
+.menu-bar .mode i.sun{
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    /* background: red; */
+    cursor: pointer;
+}
+
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 44px;
+    background: var(--toggle-color);
+    border-radius: 25px;
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+}
+
 
 
 
